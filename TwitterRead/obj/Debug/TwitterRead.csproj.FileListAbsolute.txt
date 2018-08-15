@@ -1,0 +1,10 @@
+F:\programming\C#\twitter_read\TwitterRead\bin\Debug\TwitterRead.exe.config
+F:\programming\C#\twitter_read\TwitterRead\bin\Debug\TwitterRead.exe
+F:\programming\C#\twitter_read\TwitterRead\bin\Debug\TwitterRead.pdb
+F:\programming\C#\twitter_read\TwitterRead\obj\Debug\TwitterRead.csprojResolveAssemblyReference.cache
+F:\programming\C#\twitter_read\TwitterRead\obj\Debug\TwitterRead.Properties.Resources.resources
+F:\programming\C#\twitter_read\TwitterRead\obj\Debug\TwitterRead.csproj.GenerateResource.Cache
+F:\programming\C#\twitter_read\TwitterRead\obj\Debug\TwitterRead.csproj.CoreCompileInputs.cache
+F:\programming\C#\twitter_read\TwitterRead\obj\Debug\TwitterRead.exe
+F:\programming\C#\twitter_read\TwitterRead\obj\Debug\TwitterRead.pdb
+F:\programming\C#\twitter_read\TwitterRead\obj\Debug\TwitterRead.Form1.resources

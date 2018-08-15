@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27130.2036
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TwitterRead", "TwitterRead\TwitterRead.csproj", "{258DCF9A-45CD-4091-BD8E-0BF68CE5F83E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{258DCF9A-45CD-4091-BD8E-0BF68CE5F83E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{258DCF9A-45CD-4091-BD8E-0BF68CE5F83E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{258DCF9A-45CD-4091-BD8E-0BF68CE5F83E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{258DCF9A-45CD-4091-BD8E-0BF68CE5F83E}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {7C38560B-4490-4013-B3DB-4DA2083D7B72}
+	EndGlobalSection
+EndGlobal
