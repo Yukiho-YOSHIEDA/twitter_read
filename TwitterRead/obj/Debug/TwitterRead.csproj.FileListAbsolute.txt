@@ -8,3 +8,17 @@ F:\programming\C#\twitter_read\TwitterRead\obj\Debug\TwitterRead.csproj.CoreComp
 F:\programming\C#\twitter_read\TwitterRead\obj\Debug\TwitterRead.exe
 F:\programming\C#\twitter_read\TwitterRead\obj\Debug\TwitterRead.pdb
 F:\programming\C#\twitter_read\TwitterRead\obj\Debug\TwitterRead.Form1.resources
+F:\01_programming\C#\twitter_read\TwitterRead\bin\Debug\TwitterRead.exe.config
+F:\01_programming\C#\twitter_read\TwitterRead\bin\Debug\TwitterRead.exe
+F:\01_programming\C#\twitter_read\TwitterRead\bin\Debug\TwitterRead.pdb
+F:\01_programming\C#\twitter_read\TwitterRead\obj\Debug\TwitterRead.csprojResolveAssemblyReference.cache
+F:\01_programming\C#\twitter_read\TwitterRead\obj\Debug\TwitterRead.Form1.resources
+F:\01_programming\C#\twitter_read\TwitterRead\obj\Debug\TwitterRead.Properties.Resources.resources
+F:\01_programming\C#\twitter_read\TwitterRead\obj\Debug\TwitterRead.csproj.GenerateResource.Cache
+F:\01_programming\C#\twitter_read\TwitterRead\obj\Debug\TwitterRead.csproj.CoreCompileInputs.cache
+F:\01_programming\C#\twitter_read\TwitterRead\obj\Debug\TwitterRead.exe
+F:\01_programming\C#\twitter_read\TwitterRead\obj\Debug\TwitterRead.pdb
+F:\01_programming\C#\twitter_read\TwitterRead\bin\Debug\CoreTweet.dll
+F:\01_programming\C#\twitter_read\TwitterRead\bin\Debug\Newtonsoft.Json.dll
+F:\01_programming\C#\twitter_read\TwitterRead\bin\Debug\CoreTweet.xml
+F:\01_programming\C#\twitter_read\TwitterRead\bin\Debug\Newtonsoft.Json.xml

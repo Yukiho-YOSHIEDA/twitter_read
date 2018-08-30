@@ -28,57 +28,104 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.btn_connect = new System.Windows.Forms.Button();
-            this.btn_send = new System.Windows.Forms.Button();
-            this.btn_disconnect = new System.Windows.Forms.Button();
+            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.ファイルToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.btnAutholize = new System.Windows.Forms.Button();
+            this.tbPin = new System.Windows.Forms.TextBox();
+            this.btnGetToken = new System.Windows.Forms.Button();
+            this.btnGetTweet = new System.Windows.Forms.Button();
+            this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
-            // btn_connect
+            // menuStrip1
             // 
-            this.btn_connect.Location = new System.Drawing.Point(73, 12);
-            this.btn_connect.Name = "btn_connect";
-            this.btn_connect.Size = new System.Drawing.Size(133, 59);
-            this.btn_connect.TabIndex = 0;
-            this.btn_connect.Text = "CONNECT";
-            this.btn_connect.UseVisualStyleBackColor = true;
+            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.ファイルToolStripMenuItem});
+            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
+            this.menuStrip1.Name = "menuStrip1";
+            this.menuStrip1.Size = new System.Drawing.Size(584, 24);
+            this.menuStrip1.TabIndex = 0;
+            this.menuStrip1.Text = "menuStrip1";
             // 
-            // btn_send
+            // ファイルToolStripMenuItem
             // 
-            this.btn_send.Location = new System.Drawing.Point(73, 95);
-            this.btn_send.Name = "btn_send";
-            this.btn_send.Size = new System.Drawing.Size(133, 59);
-            this.btn_send.TabIndex = 0;
-            this.btn_send.Text = "SEND";
-            this.btn_send.UseVisualStyleBackColor = true;
+            this.ファイルToolStripMenuItem.Name = "ファイルToolStripMenuItem";
+            this.ファイルToolStripMenuItem.Size = new System.Drawing.Size(53, 20);
+            this.ファイルToolStripMenuItem.Text = "ファイル";
             // 
-            // btn_disconnect
+            // btnAutholize
             // 
-            this.btn_disconnect.Location = new System.Drawing.Point(73, 172);
-            this.btn_disconnect.Name = "btn_disconnect";
-            this.btn_disconnect.Size = new System.Drawing.Size(133, 59);
-            this.btn_disconnect.TabIndex = 0;
-            this.btn_disconnect.Text = "DISCONNECT";
-            this.btn_disconnect.UseVisualStyleBackColor = true;
+            this.btnAutholize.CausesValidation = false;
+            this.btnAutholize.Font = new System.Drawing.Font("MS UI Gothic", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.btnAutholize.Location = new System.Drawing.Point(109, 104);
+            this.btnAutholize.Name = "btnAutholize";
+            this.btnAutholize.Size = new System.Drawing.Size(156, 74);
+            this.btnAutholize.TabIndex = 1;
+            this.btnAutholize.Text = "認証";
+            this.btnAutholize.UseVisualStyleBackColor = true;
+            this.btnAutholize.Click += new System.EventHandler(this.Autholize_Click);
+            // 
+            // tbPin
+            // 
+            this.tbPin.AccessibleDescription = "";
+            this.tbPin.Font = new System.Drawing.Font("MS UI Gothic", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.tbPin.Location = new System.Drawing.Point(133, 55);
+            this.tbPin.Name = "tbPin";
+            this.tbPin.Size = new System.Drawing.Size(304, 26);
+            this.tbPin.TabIndex = 2;
+            // 
+            // btnGetToken
+            // 
+            this.btnGetToken.CausesValidation = false;
+            this.btnGetToken.Font = new System.Drawing.Font("MS UI Gothic", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.btnGetToken.Location = new System.Drawing.Point(306, 104);
+            this.btnGetToken.Name = "btnGetToken";
+            this.btnGetToken.Size = new System.Drawing.Size(156, 74);
+            this.btnGetToken.TabIndex = 1;
+            this.btnGetToken.Text = "Token取得";
+            this.btnGetToken.UseVisualStyleBackColor = true;
+            this.btnGetToken.Click += new System.EventHandler(this.BtnGetToken_Click);
+            // 
+            // btnGetTweet
+            // 
+            this.btnGetTweet.CausesValidation = false;
+            this.btnGetTweet.Font = new System.Drawing.Font("MS UI Gothic", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.btnGetTweet.Location = new System.Drawing.Point(208, 212);
+            this.btnGetTweet.Name = "btnGetTweet";
+            this.btnGetTweet.Size = new System.Drawing.Size(156, 74);
+            this.btnGetTweet.TabIndex = 1;
+            this.btnGetTweet.Text = "Tweet取得";
+            this.btnGetTweet.UseVisualStyleBackColor = true;
+            this.btnGetTweet.Click += new System.EventHandler(this.BtnGetTweet_Click);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(284, 261);
-            this.Controls.Add(this.btn_disconnect);
-            this.Controls.Add(this.btn_send);
-            this.Controls.Add(this.btn_connect);
+            this.ClientSize = new System.Drawing.Size(584, 361);
+            this.Controls.Add(this.tbPin);
+            this.Controls.Add(this.btnGetToken);
+            this.Controls.Add(this.btnGetTweet);
+            this.Controls.Add(this.btnAutholize);
+            this.Controls.Add(this.menuStrip1);
+            this.MainMenuStrip = this.menuStrip1;
             this.Name = "Form1";
             this.Text = "Form1";
+            this.menuStrip1.ResumeLayout(false);
+            this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
         #endregion
 
-        private System.Windows.Forms.Button btn_connect;
-        private System.Windows.Forms.Button btn_send;
-        private System.Windows.Forms.Button btn_disconnect;
+        private System.Windows.Forms.MenuStrip menuStrip1;
+        private System.Windows.Forms.ToolStripMenuItem ファイルToolStripMenuItem;
+        private System.Windows.Forms.Button btnAutholize;
+        private System.Windows.Forms.TextBox tbPin;
+        private System.Windows.Forms.Button btnGetToken;
+        private System.Windows.Forms.Button btnGetTweet;
     }
 }
 
