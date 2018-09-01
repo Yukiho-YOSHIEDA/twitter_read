@@ -14,8 +14,7 @@ namespace TwitterRead.controller
     class SettingController
     {
         public Setting KeySetting { get; set; }
-
-        String filePath = @"settings.json";
+        public Users Users { get; set; }
 
         /// <summary>
         /// コンストラクタ
@@ -28,9 +27,10 @@ namespace TwitterRead.controller
         /// コンストラクタ
         /// </summary>
         /// <param name="setting"></param>
-        public SettingController(Setting setting)
+        public SettingController(Setting setting, Users users)
         {
-            this.KeySetting = setting;
+            KeySetting = setting;
+            Users = users;
         }
 
         /// <summary>
@@ -38,17 +38,33 @@ namespace TwitterRead.controller
         /// </summary>
         public void Road()
         {
+            String tokenDirectoryPath = @".token";
+
+            String settingFilePath = @"settings.json";
+            String usersFilePath = @".token\users.json";
+
             try
             {
-                if (!File.Exists(filePath))
+                // 必要なディレクトリチェック
+                if (!Directory.Exists(tokenDirectoryPath))
                 {
-                    InitSettingFile();
+                    var info = Directory.CreateDirectory(tokenDirectoryPath);
+                    // 隠し属性を追加
+                    info.Attributes |= FileAttributes.Hidden;
                 }
 
-                var fileStream = new FileStream(filePath, FileMode.OpenOrCreate);
+                if (!File.Exists(settingFilePath))
+                {
+                    InitFile<Setting>(settingFilePath);
+                }
 
-                var serializer = new DataContractJsonSerializer(typeof(Setting));
-                KeySetting = (Setting)serializer.ReadObject(fileStream);
+                if (!File.Exists(usersFilePath))
+                {
+                    InitFile<Users>(usersFilePath);
+                }
+
+                KeySetting = ParseJsonToModel<Setting>(settingFilePath);
+                Users = ParseJsonToModel<Users>(usersFilePath);
             }
             catch (SerializationException)
             {
@@ -62,22 +78,14 @@ namespace TwitterRead.controller
             }
         }
 
-        private void InitSettingFile()
+        /// <summary>
+        /// 設定ファイルを初期化します。
+        /// </summary>
+        private void InitFile<Type>(String filePath) where Type : new()
         {
             try
             {
-                var setting = new Setting
-                {
-                    ConsumerKey = "",
-                    ConsumerSecret = ""
-                };
-
-                var fileStream = new FileStream(filePath, FileMode.CreateNew);
-                var serializer = new DataContractJsonSerializer(typeof(Setting));
-                serializer.WriteObject(fileStream, setting);
-                fileStream.Flush();
-
-                fileStream.Dispose();
+                ParseModelToJson(filePath, new Type());
             }
             catch (Exception e)
             {
@@ -86,5 +94,33 @@ namespace TwitterRead.controller
             
         }
 
+        /// <summary>
+        /// JSONファイルをmodelクラスにパースします
+        /// </summary>
+        /// <param name="parh"></param>
+        /// <param name="model"></param>
+        /// <returns></returns>
+        private Type ParseJsonToModel<Type>(String parh)
+        {
+            var fileStream = new FileStream(parh, FileMode.OpenOrCreate);
+
+            var serializer = new DataContractJsonSerializer(typeof(Type));
+            return (Type)serializer.ReadObject(fileStream);
+        }
+
+        /// <summary>
+        /// modelクラスをJSONファイルにパースします
+        /// </summary>
+        /// <typeparam name="Type"></typeparam>
+        /// <param name="path"></param>
+        private void ParseModelToJson<Type>(String path, Type type) where Type : new()
+        {
+            var fileStream = new FileStream(path, FileMode.CreateNew);
+            var serializer = new DataContractJsonSerializer(typeof(Type));
+            serializer.WriteObject(fileStream, type);
+            fileStream.Flush();
+
+            fileStream.Dispose();
+        }
     }
 }

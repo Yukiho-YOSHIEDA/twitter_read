@@ -39,7 +39,6 @@ namespace TwitterRead.controller
         public void Authorize()
         {
             session = OAuth.Authorize(setting.ConsumerKey, setting.ConsumerSecret);
-            var options = session.ConnectionOptions ?? new ConnectionOptions();
             System.Diagnostics.Process.Start(session.AuthorizeUri.AbsoluteUri);
         }
 
