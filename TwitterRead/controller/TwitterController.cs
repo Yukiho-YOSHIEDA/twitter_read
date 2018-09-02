@@ -14,7 +14,7 @@ namespace TwitterRead.controller
     /// <summary>
     /// Twitterに関連するクラスです。
     /// </summary>
-    class TwitterController
+    public class TwitterController
     {
         model.Setting setting = null;
         OAuthSession session = null;

@@ -11,6 +11,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using TwitterRead.controller;
 using TwitterRead.model;
+using TwitterRead.view;
 
 namespace TwitterRead
 {
@@ -69,6 +70,12 @@ namespace TwitterRead
 
             twitterController.Authorize();
 
+            // ダイアログ表示
+            var formAuthorize = new FormAthorize(twitterController);
+            formAuthorize.ShowDialog(this);
+
+            // リソース開放
+            formAuthorize.Dispose();
         }
     }
 }
